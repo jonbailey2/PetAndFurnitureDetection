@@ -1,11 +1,6 @@
 import torch
 import torchvision
-from torchvision import transforms as T
-from torchvision.transforms import functional as F
 import cv2
-import cvzone
-
-from src.VideoSSD import img_tensor
 
 # Load pre-trained SSD model
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -14,7 +9,7 @@ model.eval()
 
 # Loading class names from external classes.txt file
 classnames = []
-with open('classes.txt','r') as f:
+with open('../classes.txt', 'r') as f:
     classnames = f.read().splitlines()
 
 cap = cv2.VideoCapture(1)

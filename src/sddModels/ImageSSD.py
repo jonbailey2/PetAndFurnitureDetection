@@ -9,7 +9,7 @@ model.eval()
 
 # Loading class names from external classes.txt file
 classnames = []
-with open('classes.txt','r') as f:
+with open('../classes.txt', 'r') as f:
     classnames = f.read().splitlines()
 
 # Specify image to pass into detection algorithm
